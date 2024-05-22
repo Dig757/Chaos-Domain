@@ -181,12 +181,12 @@ body {
 
 #maze div div.sentinel.wall::after {
   content: "\1F40A";
-  opacity: 100;
+  opacity: 0;
 }
 
 #maze div.sentinel.wall:nth-of-type(3n)::after {
   content: "\1F40D";
-  opacity: 100;
+  opacity: 0;
 }
 
 #maze div div.key::after {
