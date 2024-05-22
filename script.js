@@ -753,7 +753,7 @@ class MazeBuilder {
   var aliveHeroes, noOfEnemies, heroParty, enemy1, enemy2, enemy3, enemy4, enemy5, turnOrder = [],
   buttonsDiv, button1, button2, button3, button4, button5, bossPhase = 0;
 
-  let lives = 1;
+  let lives = 3;
 
   function initalizeBattle(){
     document.getElementById('enemy1Gif').style.opacity = '100';
