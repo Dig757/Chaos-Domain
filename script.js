@@ -408,7 +408,6 @@ class MazeBuilder {
   
     var nextStep = this.maze[pos].className;
   
-    /* before moving */
   
     if(nextStep.match(/sentinel/)) {
       this.setMessage("ow, that hurt!");
@@ -421,7 +420,7 @@ class MazeBuilder {
       showBrownOverlay();
       setTimeout(() => {
         initalizeBattle();
-      }, 500); // Adjust the delay as needed
+      }, 500); 
       return;
     }
 
@@ -1190,11 +1189,11 @@ function updateHealthBars() {
      if (enemy.HP <= 0) {
        enemy.HP = 0;
        const enemyGif = document.getElementById(gifId);
-       enemyGif.style.transition = 'opacity 4s ease-out'; // Apply ease-out transition
+       enemyGif.style.transition = 'opacity 4s ease-out'; 
        enemyGif.style.opacity = '0'; // Start fading out
        setTimeout(() => {
          enemyGif.style.display = 'none'; // Hide the GIF after fade-out
-       }, 2000); // Duration of fade-out animation (milliseconds)
+       }, 2000); 
      }
    }
  
@@ -1269,7 +1268,7 @@ function displayLevelUpMessage() {
     setTimeout(function() {
       document.body.removeChild(levelUpMessage);
     }, 1000); // Remove the element after fade out
-  }, 2000); // Display the message for 3 seconds
+  }, 2000); 
 }
 
 let victoryAchieved = false; // Add this variable to track victory status
@@ -1343,10 +1342,10 @@ function handleDefeat() {
   lostLifeMessage.style.left = "50%";
   lostLifeMessage.style.transform = "translate(-50%, -50%)";
   lostLifeMessage.style.color = "red";
-  lostLifeMessage.style.fontSize = "50px"; // Adjusted to fit better
-  lostLifeMessage.style.zIndex = "1001"; // Higher than black screen
+  lostLifeMessage.style.fontSize = "50px"; 
+  lostLifeMessage.style.zIndex = "1001"; 
   lostLifeMessage.style.display = "block";
-  lostLifeMessage.style.opacity = "0"; // Start hidden
+  lostLifeMessage.style.opacity = "0"; 
 
   document.body.appendChild(lostLifeMessage);
 
@@ -1374,12 +1373,11 @@ function handleDefeat() {
     blackScreen.style.opacity = '0';
     setTimeout(() => {
       blackScreen.style.display = 'none';
-    }, 1000); // Hide the black screen after fade out
-  }, 5000); // Start fading out after the message fades out
+    }, 1000); 
+  }, 5000);
 
   // Ensure the battle elements are hidden
   setTimeout(hideBattleElements, 5000); // Ensure this happens after everything
-  // Enable keyboard after all actions
   setTimeout(enableKeyboard, 6000); // Enable keyboard after hiding elements
 }
 
